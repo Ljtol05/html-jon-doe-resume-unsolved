@@ -22,7 +22,9 @@ if (fancyBody) {
 
   const profileLastName = document.createElement('span');
   profileLastName.setAttribute('class', 'last-name');
-  profileLastName.innerText = nameArr[1];
+  if (nameArr.length > 1) {
+    profileLastName.innerText = nameArr[1];
+  }
 
   profileName.innerHTML = '';
   profileName.append(profileFirstName);
